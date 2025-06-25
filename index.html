@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zokki</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Big+Shoulders+Display:wght@500&display=swap" rel="stylesheet" />
+  <script src="https://js.stripe.com/v3/"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+    }
+    header img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .price {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .option {
+      flex: 1 1 100%;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      text-align: center;
+      border-radius: 8px;
+      background: #fff;
+    }
+    @media (min-width: 600px) {
+      .option {
+        flex: 1 1 30%;
+      }
+    }
+    form {
+      margin-top: 2rem;
+    }
+    label, select, input {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #000;
+      color: #fff;
+      padding: 1rem;
+      font-size: 1rem;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .benefit {
+      background-color: #e0ffe0;
+      padding: 1rem;
+      border: 1px solid #c0ffc0;
+      border-radius: 5px;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/header.png" alt="Zokki - Fresh Socks Header" />
+  </header>
+  <section>
+    <p class="price">$38/month</p>
+    <p>Receive a new pair of socks for every day of the month. Choose your style and color, and we'll handle the rest. Each month, return your old socks in the prepaid bag — we'll wash and donate them for you.</p>
+
+    <div class="benefit">
+      <strong>Eco Bonus:</strong> Return at least 27/30 pairs monthly and get a $3/month discount. Save money while reducing waste.
+    </div>
+
+    <div class="options">
+      <div class="option">
+        <h3>Fit</h3>
+        <p>Men's or Women's</p>
+      </div>
+      <div class="option">
+        <h3>Style</h3>
+        <p>Crew or Ankle</p>
+      </div>
+      <div class="option">
+        <h3>Color</h3>
+        <p>Black or White</p>
+      </div>
+    </div>
+
+    <form action="https://buy.stripe.com/test_4gMbJ0fzn2155MA1mq0co00" method="GET">
+      <label for="fit">Choose Your Fit</label>
+      <select id="fit" name="fit">
+        <option value="mens">Men's</option>
+        <option value="womens">Women's</option>
+      </select>
+
+      <label for="style">Choose Your Style</label>
+      <select id="style" name="style">
+        <option value="crew">Crew</option>
+        <option value="ankle">Ankle</option>
+      </select>
+
+      <label for="color">Choose Your Color</label>
+      <select id="color" name="color">
+        <option value="black">Black</option>
+        <option value="white">White</option>
+      </select>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="address">Shipping Address</label>
+      <input type="text" id="address" name="address" required />
+
+      <button type="submit">Subscribe Now</button>
+    </form>
+  </section>
+</body>
+</html>
