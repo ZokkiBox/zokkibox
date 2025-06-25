@@ -6,29 +6,24 @@
   <title>Zokki</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Big+Shoulders+Display:wght@500&display=swap" rel="stylesheet" />
   <script src="https://js.stripe.com/v3/"></script>
-  <style> <style>
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  html {
-    background-image: url('main/header.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
-  }
-  body {
-    min-height: 100%;
-    background: transparent;
-  }
-    /* ------------- HEADER ------------- */
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f6e7cb; /* tan from image */
+      color: #333;
+    }
+    .hero-image {
+      width: 100%;
+      display: block;
+      max-height: 500px;
+      object-fit: cover;
+    }
     header {
       text-align: center;
       padding: 2rem 1rem;
-      background-color: rgba(0, 0, 0, 0.55);
-      color: white;
+      color: #000;
     }
     header h1 {
       font-family: 'Big Shoulders Display', cursive;
@@ -40,9 +35,8 @@
       font-size: 1.2rem;
       margin-top: 0.5rem;
     }
-    /* ------------- MAIN SECTION ------------- */
     section {
-      flex:1;
+      flex: 1;
       padding: 2rem;
       max-width: 800px;
       margin: 2rem auto;
@@ -100,6 +94,7 @@
   </style>
 </head>
 <body>
+  <img src="header.png" alt="Zokki Hero Image" class="hero-image" />
   <header>
     <h1>Zokki</h1>
     <p>One Month. Thirty Pairs. Never Rewear Socks Again.</p>
