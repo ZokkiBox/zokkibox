@@ -7,36 +7,45 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Big+Shoulders+Display:wght@500&display=swap" rel="stylesheet" />
   <script src="https://js.stripe.com/v3/"></script>
   <style>
+    /* ------------------ GLOBAL ------------------ */
+    html,body{
+      height:100%;
+      margin:0;
+    }
     body {
       font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: media('/main/header.png') no-repeat center top;
+      display:flex;
+      flex-direction:column;
+      background: url('/main/header.png') no-repeat center top fixed;
       background-size: cover;
       color: #333;
     }
+    /* ------------- HEADER ------------- */
     header {
       text-align: center;
       padding: 2rem 1rem;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.55);
       color: white;
     }
     header h1 {
       font-family: 'Big Shoulders Display', cursive;
       font-size: 3rem;
       margin: 0;
+      letter-spacing: 0.05em;
     }
     header p {
       font-size: 1.2rem;
       margin-top: 0.5rem;
     }
+    /* ------------- MAIN SECTION ------------- */
     section {
+      flex:1;
       padding: 2rem;
       max-width: 800px;
-      margin: 0 auto;
-      background-color: rgba(255, 255, 255, 0.95);
-      border-radius: 10px;
-      margin-top: 2rem;
+      margin: 2rem auto;
+      background-color: rgba(255, 255, 255, 0.92);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
     .price {
       font-size: 2rem;
@@ -57,9 +66,7 @@
       background: #fff;
     }
     @media (min-width: 600px) {
-      .option {
-        flex: 1 1 30%;
-      }
+      .option { flex: 1 1 30%; }
     }
     form {
       margin-top: 2rem;
@@ -95,11 +102,11 @@
     <p>One Month. Thirty Pairs. Never Rewear Socks Again.</p>
   </header>
   <section>
-    <p class="price">$38/month</p>
-    <p>Receive a new pair of socks for every day of the month. Choose your style and color, and we'll handle the rest. Each month, return your old socks in the prepaid bag — we'll wash and donate them for you.</p>
+    <p class="price">$38 / month</p>
+    <p>Receive a new pair of socks for every day of the month. Choose your fit, style, and color — we'll handle the rest. Each month, return last month’s socks in the prepaid bag and we’ll wash & donate them.</p>
 
     <div class="benefit">
-      <strong>Eco Bonus:</strong> Return at least 27 of the 30 pairs we send you monthly and get a $3/month discount. Save money while reducing waste.
+      <strong>Eco&nbsp;Bonus:</strong> Return at least 27/30 pairs monthly and get a $3 discount on your next bill.
     </div>
 
     <div class="options">
